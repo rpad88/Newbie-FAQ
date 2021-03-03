@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;    
+}
+
+.container {
+    position: relative;
+    margin: auto;    
+    top: 25%;  
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
+  
+    width: 375px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 2rem;
+    box-sizing: border-box;    
+}
+
+.woman_mobile{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: -23%;
+    left: 12%;
+    width: 70%;
+    /* border: 1px solid red; */
+}
+
+.imgDesktop, .imgOverflow{
+    display: none;
+}
+
+.shadow_mobile{
+    position: absolute;
+    display: block;
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 8px;
+    left: 76px;
+    /* border: 1px solid black; */
+}
+.shadow_desktop{
+    display: none;
+}
+
+h1{
+    font-weight: 700;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    color: hsl(237, 12%, 33%);
+}
+
+h3{
+    font-weight: 700;
+    margin-top: 0.8rem;
+    color: hsl(237, 12%, 33%);
+}
+h3:hover {
+    color: hsl(14, 88%, 65%);
+    transition: 0.15s;
+}
+
+hr{
+    margin-top: 0.5rem;
+    color: hsl(240, 5%, 91%);
+}
+
+.hide {
+    /* visibility: hidden; **funciona mas deixa margin */
+    display: none;
+}
+a:hover + .hide { /*altera a classe .hide dentro dos links*/
+    /* visibility: visible; **funciona mas deixa margin */
+    display: block;
+}
+
+.faq img:hover { 
+    transform: scaleY(-1); /*altera a img em sentido vertical quando clicada */
+}
+
+p {
+    font-size: 12px;
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+    margin: 10px 0;
+    max-width: fit-content;
+    text-align: center;
+}
+
+@media (min-width: 900px)
+{
+    body{
+        border: auto;
+    }
+    .container {
+        width: 850px;
+        height: 550px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 0 2vw 0 0;
+    }
+    .woman_mobile, .shadow_mobile {
+        display: none;
+    }
+
+    .leftSide{
+        width: 50%;
+        height: 100%;
+        border: 0 auto 0 0;
+        display: flex;
+        overflow: hidden;
+        /* border: 1px solid black; */
+    }
+    .imgDesktop{
+        display: flex;
+        position: relative;
+        width: 60%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+
+    #bgDesktop{
+        position: absolute;
+        width: 750px;
+        height: 160%;
+        left: -440px;
+        bottom: -90px;
+        z-index: 1;
+    }
+
+    #womanDesktop{
+        position: absolute;
+        width: 380px;
+        height: auto;
+        left: -60px;
+        bottom: 140px;
+        z-index: 2;
+    }
+    .imgOverflow{
+        display: flex;
+        overflow: visible;
+    }
+    .box_desktop{
+        display: flex;
+        position: absolute;
+        width: 20%;
+        left: -80px;
+        bottom: 160px;
+        z-index: 3;
+    }
+
+    .faq {
+        height: 100%;
+        float: right;
+        display: block;
+        margin-left: auto;
+        position: relative;
+        border: auto;
+        padding: auto;
+    }
+
+}
